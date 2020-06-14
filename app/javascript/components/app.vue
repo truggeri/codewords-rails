@@ -18,5 +18,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import "packs/stylesheets/application.scss";
 </style>
