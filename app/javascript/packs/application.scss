@@ -1,7 +1,17 @@
 @charset "utf=8";
 @import 'bulma/bulma';
 
-h1 { 
-  color: red;
-  font-size: 2em;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: 20px;
+}
+  
+#wrapper {
+  flex: 1;
+  padding: 20px;
 }
