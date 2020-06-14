@@ -6,6 +6,6 @@ class GamesController < ApplicationController
   def show
     @game = Game.find_by(id: params[:id])
 
-    return head :no_content if @game.blank?
+    redirect_to new_game_path if @game.blank?
   end
 end
