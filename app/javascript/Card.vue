@@ -1,6 +1,6 @@
 <template>
   <div :class="css_class" :id="id">
-    <p>{{ word }}</p>
+    <span>{{ word }}</span>
   </div>
 </template>
 
@@ -22,15 +22,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-p {
-  font-size: 2em;
-  text-align: center;
-}
-
 .card {
-  width: 100px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1em;
   height: 100px;
-  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
 .blue {

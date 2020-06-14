@@ -1,8 +1,10 @@
 <template>
-  <div id="app" style="border: 3px double green;">
-    <div v-for="row in game_size" v-bind:key="row" class="column">
-      <div v-for="col in game_size" v-bind:key="col" class="">
-        <Card v-bind:color="cardColor(row, col)" v-bind:id="cardId(row, col)" word="Foo" />
+  <div id="app" class="columns is-centered">
+    <div class="column is-two-thirds">
+      <div v-for="row in game_size" v-bind:key="row" class="columns">
+        <div v-for="col in game_size" v-bind:key="col" class="column is-one-fifth is-vcentered">
+          <Card v-bind:color="cardColor(row, col)" v-bind:id="cardId(row, col)" word="Foo" />
+        </div>
       </div>
     </div>
   </div>
