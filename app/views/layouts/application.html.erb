@@ -15,11 +15,7 @@
   <body>
     <div id="wrapper" class="columns is-centered">
       <div class="column is-two-thirds">
-        <% flash.each do |message_type, message| %>
-          <% message_type = "danger"  if %w[error alert].include?(message_type) %>
-          <% message_type = "success" if %w[notice].include?(message_type) %>
-          <%= content_tag(:div, message, class: "notification is-#{message_type}") %>
-        <% end %>
+        <%= flash_notice(flash) %>
 
         <%= yield %>
       </div>
