@@ -1,10 +1,11 @@
 class GamesController < ApplicationController
   def new
     @game = Game.new
+    @game.player.build(team: Player.random_team)
   end
 
   def create
-    @game = Game.create(permitted_params)
+    @game = Game.create(game_params)
     redirect_to game_path(@game) and return if @game.persisted?
      
     flash[:error] = "Game could not be created"
@@ -18,7 +19,7 @@ class GamesController < ApplicationController
 
   private
   
-  def permitted_params
-    params.require(:game).permit(%i[name])
+  def game_params
+    params.require(:game).permit(:name, player_attributes: [:name])
   end
 end

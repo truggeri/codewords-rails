@@ -3,5 +3,5 @@ en:
     attributes:
       game:
         name: "Name of your Game"
-      user:
+      player:
         name: "Your name"
