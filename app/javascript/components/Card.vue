@@ -32,14 +32,4 @@ export default {
   text-align: center;
   width: 100%;
 }
-
-.blue {
-  background-color: rgb(65, 131, 204);
-  color: white;
-}
-
-.red {
-  background-color: rgb(209, 48, 48);
-  color: white;
-}
 </style>

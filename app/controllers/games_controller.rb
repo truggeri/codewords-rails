@@ -13,8 +13,11 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find_by(id: params[:id])
-    redirect_to new_game_path if @game.blank?
+    @game   = Game.find_by(id: params[:id])
+    redirect_to new_game_path and return if @game.blank?
+
+    # TODO - use session to establish if this is an existing player
+    @player = @game.player.build
   end
 
   private

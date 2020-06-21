@@ -1,5 +1,9 @@
 <template>
   <div class="container">
+    <div>
+      <Name />
+    </div>
+    <br />
     <div v-for="row in game_size" v-bind:key="row" class="columns">
       <div v-for="col in game_size" v-bind:key="col" class="column is-one-fifth is-vcentered">
         <Card v-bind:color="cardColor(row, col)" v-bind:id="cardId(row, col)" word="Foo" />
@@ -10,11 +14,13 @@
 
 <script>
 import Card from "./Card"
+import Name from "./Name"
 
 export default {
   name: "GameBoard",
   components: {
-    Card
+    Card,
+    Name
   },
   data: function () {
     return {
