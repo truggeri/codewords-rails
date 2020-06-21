@@ -8,7 +8,7 @@ class GamesController < ApplicationController
     @game = Game.create(game_params)
     redirect_to game_path(@game) and return if @game.persisted?
      
-    flash[:error] = "Game could not be created"
+    flash[:error] = I18n.t("game.create.failed")
     render("games/new")
   end
 

@@ -1,4 +1,8 @@
 en:
+  game:
+    create:
+      failed: "Game could not be created"
+
   activerecord:
     attributes:
       game:
